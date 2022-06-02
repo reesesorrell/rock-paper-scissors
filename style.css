@@ -1,0 +1,39 @@
+body {
+    background-color: azure;
+}
+
+.score,
+.button-container,
+.results {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px;
+}
+
+button {
+    font-size: 24px;
+    width: 250px;
+    height: 100px;
+}
+
+.score,
+.results {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.score {
+    font-style: italic;
+}
+
+#rock {
+    background-color: darkkhaki;
+}
+
+#paper {
+    background-color: white;
+}
+
+#scissors {
+    background-color: silver;
+}
