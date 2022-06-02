@@ -44,11 +44,19 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
-    for (let i=0; i<5; i++) {
-        let playerSelection = prompt('Choose rock, paper, or scissors: ');
-        console.log(playRound(playerSelection, computerPlay()));
-    }
+function displayResults(message) {
+    const results = document.querySelector('.results');
+    results.textContent = message;
 }
 
-game();
+function readChoice() {
+    displayResults(playRound(this.id, computerPlay()));
+}
+//takes the id of the button and puts it into the playRound function
+
+const buttons = Array.from(document.querySelectorAll('.choice'));
+//finds all choice buttons
+
+buttons.forEach(element => {
+    element.addEventListener('click', readChoice);
+}); // adds listener to every button
